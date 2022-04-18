@@ -1,0 +1,113 @@
+@import "~bootstrap/scss/bootstrap";
+$gray: #686464;
+$white: #f0f0f0;
+$black: #000000;
+$semiSilver: #efefef;
+
+.m-0 {
+  margin: auto;
+}
+.nav .active {
+  color: white;
+  background-color: #0d6efd;
+}
+.h-400px {
+  height: 400px;
+}
+.bg-gray {
+  background-color: gray;
+}
+.bg-semi-silver {
+  background-color: $semiSilver;
+}
+.line-hieght-300 {
+  line-height: 300%;
+}
+.max-heigh-50px {
+  max-height: 50px;
+}
+
+//justify
+.justify-items-start {
+  justify-items: start;
+}
+.justify-items-end {
+  justify-items: end;
+}
+.justify-items-center {
+  justify-items: center;
+}
+.justify-items-stretch {
+  justify-items: stretch;
+}
+.left-80 {
+  left: 80%;
+}
+
+//header
+.header-button {
+  position: absolute;
+  top: 55px;
+  background-color: #e9ecef;
+  width: 120px;
+  left: -5px;
+  gap: 5px;
+}
+
+//button
+.next-button {
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+
+//drag question page
+.drag-drop-answer {
+  display: inline-block;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-color: #000000;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:hover {
+    cursor: move;
+    border: 2px solid #000000;
+  }
+  &[activeOnDragOverAnimation="1"] {
+    animation: onDragOverAnimation 1s linear infinite;
+  }
+  &[activeOnDragOverAnimation="2"] {
+    animation: onDragMoveAnimation 1s linear infinite;
+  }
+}
+
+//animation
+.change-re-order-answer {
+  transform: none !important;
+}
+
+@keyframes onDragOverAnimation {
+  from {
+    border: 4px solid #3485fe;
+    background-color: #c1d3ef;
+  }
+  to {
+    border: 4px solid #3485fe;
+    background-color: #c1d3ef;
+  }
+}
+
+@keyframes onDragMoveAnimation {
+  from {
+    border: 4px solid #3485fe;
+  }
+  to {
+    border: 4px solid #3485fe;
+  }
+}
