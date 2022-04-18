@@ -78,7 +78,6 @@ const reOrderQuestionSlice = createSlice({
   reducers: {
     //   action to saga
     getAnswer(state, action) {
-      console.log(action.payload);
       state.isDone = true;
     },
     updateAnswerByQuestion(state, action) {

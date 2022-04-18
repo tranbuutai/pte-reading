@@ -17,7 +17,6 @@ export function ReOrderQuestion() {
   const question = useSelector(selectReOrderQuestionData);
   const [checkValue, setCheckValue] = useState(true);
   const handleOnDragEnd = (result) => {
-    console.log(result);
     if (checkValue) {
       try {
         if (result.destination.index >= question.answer.length) return;

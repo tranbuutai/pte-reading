@@ -110,10 +110,6 @@ const dragQuestionSlice = createSlice({
       state.paragraph.text[dropIndex - 1].answer =
         state.paragraph.text[dragIndex].answer;
       state.paragraph.text[dragIndex].answer = temp;
-      console.log(state.answer[dropIndex - 1]);
-      console.log(temp);
-      console.log({ dropIndex, dragIndex });
-      console.log("ok");
       return;
     },
     clearData() {

@@ -17,7 +17,6 @@ export function FillQuestion() {
 
   useEffect(() => {
     question.answer != 0 && (answer.current.answer = [...question.answer]);
-    console.log(answer.current.answer);
   }, [question]);
 
   const handleSelect = (index, e) => {

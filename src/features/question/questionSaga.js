@@ -25,7 +25,6 @@ function* changeDoneStatus(payload) {
 }
 
 function* clearData() {
-  console.log("first");
   yield all([
     put(fillQuestionActions.clearData()),
     put(multipleChoiceQuestionActions.clearData()),

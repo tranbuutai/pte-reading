@@ -50,7 +50,6 @@ const multipleChoiceQuestionSlice = createSlice({
       state.isDone = true;
     },
     updateAnswer(state, action) {
-      console.log(action.payload);
       const check = state.answer.find((value) => value === action.payload);
       check
         ? (state.answer = state.answer.filter(
