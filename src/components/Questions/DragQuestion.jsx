@@ -72,7 +72,12 @@ export function DragQuestion() {
   };
   return (
     <>
-      <Header title={question.title} id={question.id} />
+      <Header
+        title={question.title}
+        id={question.id}
+        handleButtonClick={handleButtonClick}
+        answer={question}
+      />
       <div className="w-100 px-4">
         <div className="d-flex justify-content-center align-items-center">
           <div className="px-5 lh-lg">
@@ -147,6 +152,7 @@ export function DragQuestion() {
       </div>
       <NextButton
         next={5}
+        prev={3}
         handleButtonClick={handleButtonClick}
         answer={question}
       />

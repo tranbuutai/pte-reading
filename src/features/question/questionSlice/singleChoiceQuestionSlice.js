@@ -45,6 +45,9 @@ const singleChoiceQuestionSlice = createSlice({
     getAnswer(state, action) {
       state.isDone = true;
     },
+    endExam(state, action) {
+      state.isDone = true;
+    },
     updateAnswer(state, action) {
       state.answer = action.payload;
     },

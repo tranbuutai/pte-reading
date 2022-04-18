@@ -41,6 +41,7 @@ export function* resultByQuestionSaga() {
       multipleChoiceQuestionActions.getAnswer.type,
       reOrderQuestionActions.getAnswer.type,
       dragQuestionActions.getAnswer.type,
+      singleChoiceQuestionActions.getAnswer.type,
     ],
     handleQuestion
   );
@@ -48,7 +49,7 @@ export function* resultByQuestionSaga() {
 
 export function* totalResultsSaga() {
   yield takeLatest(
-    [singleChoiceQuestionActions.getAnswer.type],
+    [singleChoiceQuestionActions.endExam.type],
     changeDoneStatus
   );
 }

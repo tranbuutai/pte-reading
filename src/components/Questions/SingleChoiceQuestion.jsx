@@ -19,13 +19,23 @@ export function SingleChoiceQuestion() {
     dispatch(singleChoiceQuestionActions.getAnswer(answer));
   };
 
+  const handleButtonEndClick = (question) => {
+    const answer = { id: 4, answer: question.answer };
+    dispatch(singleChoiceQuestionActions.endExam(answer));
+  };
+
   const HandleOnChange = (e) => {
     dispatch(singleChoiceQuestionActions.updateAnswer(e.target.value));
   };
 
   return (
     <>
-      <Header title={question.title} id={question.id} />
+      <Header
+        title={question.title}
+        id={question.id}
+        handleButtonClick={handleButtonClick}
+        answer={question}
+      />
       <div className="w-100 px-4">
         <Row className="m-0 justify-content-center">
           <Col className="mx-4">
@@ -63,7 +73,8 @@ export function SingleChoiceQuestion() {
       </div>
       <NextButton
         next={"result"}
-        handleButtonClick={handleButtonClick}
+        prev={4}
+        handleButtonClick={handleButtonEndClick}
         answer={question}
       />
     </>

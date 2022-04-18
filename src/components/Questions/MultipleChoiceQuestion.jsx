@@ -26,7 +26,12 @@ export function MultipleChoiceQuestion() {
 
   return (
     <>
-      <Header title={question.title} id={question.id} />
+      <Header
+        title={question.title}
+        id={question.id}
+        handleButtonClick={handleButtonClick}
+        answer={question}
+      />
       <div className="w-100 px-4">
         <Row className="m-0 justify-content-center">
           <Col className="mx-4">
@@ -66,6 +71,7 @@ export function MultipleChoiceQuestion() {
       </div>
       <NextButton
         next={3}
+        prev={1}
         handleButtonClick={handleButtonClick}
         answer={question}
       />

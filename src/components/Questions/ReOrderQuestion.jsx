@@ -62,7 +62,12 @@ export function ReOrderQuestion() {
 
   return (
     <>
-      <Header title={question.title} id={question.id} />
+      <Header
+        title={question.title}
+        id={question.id}
+        handleButtonClick={handleButtonClick}
+        answer={question}
+      />
       <div className="w-100 px-4 fs-5">
         <p className="p-4 fw-bold fst-italic text-center">
           The text boxes in the left panel have been placed in random order.
@@ -151,6 +156,7 @@ export function ReOrderQuestion() {
       </div>
       <NextButton
         next={4}
+        prev={2}
         handleButtonClick={handleButtonClick}
         answer={question}
       />

@@ -28,7 +28,12 @@ export function FillQuestion() {
 
   return (
     <>
-      <Header title={question.title} id={question.id} />
+      <Header
+        title={question.title}
+        id={question.id}
+        handleButtonClick={handleButtonClick}
+        answer={answer.current}
+      />
       <div className="w-100 px-4">
         <div className="d-flex justify-content-center align-items-center">
           <div className="px-5 lh-lg fs-5">
