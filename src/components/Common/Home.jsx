@@ -23,7 +23,7 @@ export function Home() {
             size="lg"
             onClick={() => handleButtonClick()}
           >
-            Hit here
+            ........ here
           </Button>
         </Link>
       </div>
