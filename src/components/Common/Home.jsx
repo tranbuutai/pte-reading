@@ -13,7 +13,7 @@ export function Home() {
   useEffect(() => {
     dispatch(questionActions.endExam());
   });
-  console.log(process.env.APP)
+  console.log(process.env.REACT_APP_TEST)
   return (
     <>
       <h1 className="text-center m-5">Ready?</h1>
