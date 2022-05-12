@@ -24,7 +24,7 @@ export function Home() {
             size="lg"
             onClick={() => handleButtonClick()}
           >
-            Hit  here {process.end.REACT_APP_ASD}
+            Hit  here {process.env.REACT_APP_ASD}
           </Button>
         </Link>
       </div>
